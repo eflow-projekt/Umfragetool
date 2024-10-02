@@ -11,7 +11,7 @@ import { ICheckout } from "interfaces/edit/ICheckout";
 import { EditorModes } from "lib/edit/EditorModes";
 import { Point } from "lib/geometry/point";
 import { Vector } from "lib/geometry/vector";
-import {useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
 	areConfigsDifferent,
 	connectPoints,
@@ -215,8 +215,14 @@ export default function Editor() {
 				throw new Error("Failed to fetch config data");
 			}
 			const layoutData: IeFlowFile = await response.json();
-			setPolygonCorners(layoutData.PolygonCorners);
-			//setHolePolygons(layoutData.HoleCorners);
+
+			if (!layoutData) {
+				throw new Error("No data fetched");
+			}
+
+			if (layoutData.PolygonCorners) {
+				setPolygonCorners(layoutData.PolygonCorners);
+			}			//setHolePolygons(layoutData.HoleCorners);
 			setDoors(layoutData.Door);
 			setShelfs(layoutData.Shelfs);
 			setBackgroundImagePosition(layoutData.BackgroundImagePosition);

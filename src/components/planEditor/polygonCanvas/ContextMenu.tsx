@@ -16,7 +16,7 @@ interface ContextMenuProps {
 
 const ContextMenu: React.FC<ContextMenuProps> = ({ mode, visible, x, y, shelf, onClose, onMenuItemClick, globalSelectedItems, globalSelectedShoppingTimes }) => {
     const menuItems = ['Fisch (Theke)', 'Fleisch (Theke)', 'Käse (Theke)',
-        'Käse', 'Milchprodukte', 'Milch',  'Wurst', 'Brot (Theke)', 'Obst', 'Gemüse', 'Getränke', 'Getränke (gekühlt)',
+        'Käse', 'Milchprodukte', 'Milch', 'Wurst', 'Brot (Theke)', 'Obst', 'Gemüse', 'Getränke', 'Getränke (gekühlt)',
         'Alkohol', 'Pflegeartikel', 'Haushalt', 'Snacks (salzig)', 'Snacks (süß)', 'Tiefkühler (Fleisch/Fisch)'
         , 'Tiefkühler (Obst/Gemüse)', 'Tiefkühler (Fertiggerichte)', 'Tiefkühler (Eis)', 'Tiefkühler (Pizza)', 'Tiefkühler (Brot/Gebäck)',
         'Tiefkühler (Kuchen)', 'Konserven', 'Nudeln/Reis', 'Fertigprodukte/Soßen'
@@ -27,7 +27,7 @@ const ContextMenu: React.FC<ContextMenuProps> = ({ mode, visible, x, y, shelf, o
     if (!visible) {
         return null;
     }
-    
+
     return (
         <>
             <style>
@@ -64,20 +64,22 @@ const ContextMenu: React.FC<ContextMenuProps> = ({ mode, visible, x, y, shelf, o
             </style>
             <div className="context-menu" onClick={(e) => { e.stopPropagation(); onClose(); }}>
                 <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-                    { mode == EditorModes.image  && shelf && shoppingTimes.map(item =>
-                            <li
-                                onClick={() => onMenuItemClick(item, shelf)}
-                                className={ shelf.shoppingTime === item ? 'selected-item' : ''}
-                            >{item}</li>
-                )}
+                    {mode == EditorModes.image && shelf && shoppingTimes.map(item =>
+                        <li key={item}
+                            onClick={() => onMenuItemClick(item, shelf)}
+                            className={shelf.shoppingTime === item ? 'selected-item' : ''}
+                        >{item}</li>
+                    )}
                     {mode === EditorModes.shelfs && menuItems.map(item =>
-                        shelf && shelf.selectedItems.includes(item) ?
+                        shelf?.selectedItems && shelf.selectedItems.includes(item) ?
                             <li
+                                key={item}
                                 onClick={() => onMenuItemClick(item, shelf)}
                                 className={globalSelectedItems?.includes(item) ? 'selected-item' : ''}
                             >{item}</li>
                             :
                             <li
+                                key={item}
                                 onClick={() => !globalSelectedItems?.includes(item) && onMenuItemClick(item, shelf)}
                                 className={globalSelectedItems?.includes(item) ? 'disabled' : ''}
                             >
