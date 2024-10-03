@@ -32,20 +32,20 @@ export interface IPlanEditorProps {
 
 
 function LayoutSurvey({
-                        backgroundImage,
-                        mode,
-                        polygonCorners,
-                        holePolygons,
-                        doors,
-                        walls,
-                        fit,
-                        grid,
-                        holeWallsList,
-                        shelfs,
-                        checkouts,
-                        referenceLine,
-                        backgroundImagePosition,
-                    }: IPlanEditorProps) {
+    backgroundImage,
+    mode,
+    polygonCorners,
+    holePolygons,
+    doors,
+    walls,
+    fit,
+    grid,
+    holeWallsList,
+    shelfs,
+    checkouts,
+    referenceLine,
+    backgroundImagePosition,
+}: IPlanEditorProps) {
     const [activeDoorPoint, setActiveDoorPoint] = useState<{ point: Point, vector: Vector } | null>(null);
     const [globalSelectedShoppingTimes, setGlobalSelectedShoppingTimes] = useState<string[]>([]);
     const [shoppingOrderIndex, setShoppingOrderIndex] = useState<number>(0);
@@ -83,17 +83,22 @@ function LayoutSurvey({
     };
 
     const handleClickCheckout = (e: any, checkout: ICheckout) => {
+        console.log("checkout clicked")
         if (checkouts.some(checkout => checkout.shoppingOrder !== undefined)) {
+            console.log("checkout without shopping order")
             return;
         }
         if (mode === EditorModes.image && checkout) {
-            if (checkout.shoppingOrder === undefined   ) {
+            if (checkout.shoppingOrder === undefined) {
                 checkouts.forEach(checkout => {
                     const order = parseInt(checkout.shoppingOrder!);
                     if (order !== undefined) {
+                        console.log("checkout int parse failed?")
                         return
                     }
                 });
+
+                console.log("checkout index added")
                 setShoppingOrderIndex(prevIndex => {
                     const newIndex = prevIndex + 1;
                     checkout.shoppingOrder = newIndex.toString();
@@ -109,9 +114,9 @@ function LayoutSurvey({
     };
 
     const handleMenuItemClick = (itemText: string, selectedShelf: IShelf | null) => {
-         if (mode === EditorModes.image && selectedShelf) {
+        if (mode === EditorModes.image && selectedShelf) {
             if (itemText !== selectedShelf.shoppingTime) {
-                if (selectedShelf.shoppingTime === undefined   ) {
+                if (selectedShelf.shoppingTime === undefined) {
                     setShoppingOrderIndex(prevIndex => {
                         const newIndex = prevIndex + 1;
                         selectedShelf.shoppingOrder = newIndex.toString();
@@ -196,7 +201,7 @@ function LayoutSurvey({
                 onDeleteCheckout={handleCheckoutRightClick}
             />
             <div
-                style={{zIndex: 5}}
+                style={{ zIndex: 5 }}
             >
                 <ContextMenu
                     mode={mode}
