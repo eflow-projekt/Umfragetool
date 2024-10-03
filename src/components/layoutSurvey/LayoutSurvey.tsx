@@ -104,7 +104,7 @@ function LayoutSurvey({
                     checkout.shoppingOrder = newIndex.toString();
                     return newIndex;
                 });
-                checkout.shoppingOrder = undefined
+                // checkout.shoppingOrder = undefined
             }
         }
     };
@@ -157,6 +157,7 @@ function LayoutSurvey({
 
     const handleCheckoutRightClick = (selectedCheckout: ICheckout | null) => {
         if (mode === EditorModes.image && selectedCheckout && selectedCheckout.shoppingOrder !== undefined) {
+            console.log("checkout right clicked")
             setShoppingOrderIndex(prevIndex => {
                 const newIndex = prevIndex - 1;
                 return newIndex;
