@@ -16,7 +16,7 @@
 		"dotenv": "^16.4.5",
 		"drizzle-orm": "^0.31.2",
 		"fs": "^0.0.1-security",
-		"konva": "^9.3.11",
+		"konva": "^9.3.15",
 		"next": "14.2.3",
 		"next-navigation": "^1.0.6",
 		"postgres": "^3.4.4",
@@ -31,7 +31,7 @@
 		"uuid": "^10.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "^20",
+		"@types/node": "^18.15.11",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
 		"autoprefixer": "^10.4.19",
