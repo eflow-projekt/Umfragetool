@@ -107,11 +107,11 @@ export default function Editor() {
 	});
 	const walls = connectPoints(polygonCorners);
 
-	const [holePolygons, setHolePolygons] = useState<IPolygon[]>([]);
-	// const innerWalls = connectPoints(holeCorners)
-	const innerWallsList = holePolygons.map((corners) =>
-		connectPoints(corners),
-	);
+	const holyPolygonsInit: IPolygon[] = [];
+	const [holePolygons, setHolePolygons] = useState<IPolygon[]>(holyPolygonsInit);
+	let innerWalls: Vector[][] = [];
+
+
 	const [shelfs, setShelfs] = useState<IShelf[]>([]);
 	const [checkouts, setCheckouts] = useState<ICheckout[]>([]);
 	const [doors, setDoors] = useState<IDoor[]>([]);
@@ -338,7 +338,7 @@ export default function Editor() {
 					polygonCorners={polygonCorners}
 					holePolygons={holePolygons}
 					walls={walls}
-					holeWallsList={innerWallsList}
+					holeWallsList={innerWalls}
 					backgroundImagePosition={backgroundImagePosition}
 					handleCornerChange={(newPolygons) => {
 						setPolygonCorners(newPolygons[0]);

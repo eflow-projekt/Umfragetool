@@ -916,7 +916,7 @@ function PolygonCanvas({
 											/>
 										);
 									})}
-								{holePolygons.length > 0 &&
+								{holePolygons && holePolygons.length > 0 &&
 									holePolygons.map((polygon, index) => {
 										const isLastPolygon =
 											index === holePolygons.length - 1;
@@ -933,7 +933,7 @@ function PolygonCanvas({
 																0 &&
 																!polygon.closed &&
 																mode ===
-																	EditorModes.objects && (
+																EditorModes.objects && (
 																	<Circle
 																		x={
 																			point.x
@@ -993,13 +993,13 @@ function PolygonCanvas({
 																	polygon
 																		.corners
 																		.length -
-																		1
+																	1
 																].x,
 																polygon.corners[
 																	polygon
 																		.corners
 																		.length -
-																		1
+																	1
 																].y,
 																cursorPosition.x,
 																cursorPosition.y,
