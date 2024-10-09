@@ -1,0 +1,240 @@
+{
+  "name": "Blapka",
+  "Door": [
+    {
+      "wallId": "GjdrpMZ0uW513w9LPLZG36vn-J58tSOj5WsQyArl2Y",
+      "name": "F7CdlAOXDDfPpQNoHnQha",
+      "vector": {
+        "id": "g69UKXkY9iRGJ47vqCeOaztLpZqxWPXc3TqpCIpxPa",
+        "a": {
+          "id": "g69UKXkY9iRGJ47vqCeOa",
+          "x": 78.27370165619561,
+          "y": 371.31381229783096
+        },
+        "b": {
+          "id": "ztLpZqxWPXc3TqpCIpxPa",
+          "x": 76.82925312710185,
+          "y": 535.0179789284566
+        },
+        "angle": 90.50553787648099,
+        "length": 163.71053907363708,
+        "v_x": -1.444448529093762,
+        "v_y": 163.70416663062565,
+        "midPoint": {
+          "id": "u5jdHxNgLqyaH6WDahfYY",
+          "x": 77.55147739164873,
+          "y": 453.1658956131438
+        }
+      },
+      "hover": false
+    }
+  ],
+  "Shelfs": [
+    {
+      "name": "jJHnrmScM1UOKNR20A5tn",
+      "id": "jJHnrmScM1UOKNR20A5tn",
+      "polygon": {
+        "x": 241.04164123535156,
+        "y": 242.5,
+        "width": 168.75,
+        "height": 52.5,
+        "rotation": 0
+      },
+      "hover": false,
+      "text": "Fisch (Theke)",
+      "selectedItems": [
+        "Fisch (Theke)"
+      ],
+      "selectedShoppingTimes": []
+    },
+    {
+      "name": "DMGjfwuRTUADBfJfnRJiJ",
+      "id": "DMGjfwuRTUADBfJfnRJiJ",
+      "polygon": {
+        "x": 247.29164123535156,
+        "y": 443.75,
+        "width": 142.5,
+        "height": 67.5,
+        "rotation": 0
+      },
+      "hover": false,
+      "text": "Käse (Theke)",
+      "selectedItems": [
+        "Käse (Theke)"
+      ],
+      "selectedShoppingTimes": []
+    },
+    {
+      "name": "_7NfxcuhjZS8Pbucav3nA",
+      "id": "_7NfxcuhjZS8Pbucav3nA",
+      "polygon": {
+        "x": 631.0416412353516,
+        "y": 326.25,
+        "width": 180,
+        "height": 62.5,
+        "rotation": 0
+      },
+      "hover": false,
+      "text": "Milch",
+      "selectedItems": [
+        "Milch"
+      ],
+      "selectedShoppingTimes": []
+    }
+  ],
+  "Domainpolygon": {
+    "numberPoints": 18,
+    "segmentPoints": [
+      79,
+      711,
+      76,
+      371,
+      665,
+      305,
+      1014,
+      517,
+      931,
+      874,
+      350,
+      895,
+      241.04164123535156,
+      757.5,
+      409.79164123535156,
+      757.5,
+      409.79164123535156,
+      705,
+      241.04164123535156,
+      705,
+      247.29164123535156,
+      556.25,
+      389.79164123535156,
+      556.25,
+      389.79164123535156,
+      488.75,
+      247.29164123535156,
+      488.75,
+      631.0416412353516,
+      673.75,
+      811.0416412353516,
+      673.75,
+      811.0416412353516,
+      611.25,
+      631.0416412353516,
+      611.25
+    ],
+    "numberSegments": 18,
+    "pointOrder": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4,
+      5,
+      5,
+      0,
+      6,
+      7,
+      7,
+      8,
+      8,
+      9,
+      9,
+      6,
+      10,
+      11,
+      11,
+      12,
+      12,
+      13,
+      13,
+      10,
+      14,
+      15,
+      15,
+      16,
+      16,
+      17,
+      17,
+      14
+    ],
+    "numberHoles": 3,
+    "holes": [
+      {
+        "x": 325.41664123535156,
+        "y": 731.25
+      },
+      {
+        "x": 318.54164123535156,
+        "y": 522.5
+      },
+      {
+        "x": 721.0416412353518,
+        "y": 642.5
+      }
+    ]
+  },
+  "PolygonCorners": {
+    "corners": [
+      {
+        "id": "GjdrpMZ0uW513w9LPLZG3",
+        "x": 79,
+        "y": 289
+      },
+      {
+        "id": "6vn-J58tSOj5WsQyArl2Y",
+        "x": 76,
+        "y": 629
+      },
+      {
+        "id": "a6Nknjq_vaU3Js2kO9N6O",
+        "x": 665,
+        "y": 695
+      },
+      {
+        "id": "uxgxGgeEQE9ID6ExbGNJv",
+        "x": 1014,
+        "y": 483
+      },
+      {
+        "id": "x0PxjOaWtUsi0uKUKIMYm",
+        "x": 931,
+        "y": 126
+      },
+      {
+        "id": "DAKALFHUGtIVJ_muejsHu",
+        "x": 350,
+        "y": 105
+      }
+    ],
+    "closed": true
+  },
+  "BackgroundImagePosition": {
+    "name": "default",
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "rotation": 0,
+    "scaleX": 1,
+    "scaleY": 1
+  },
+  "Checkouts": [
+    {
+      "name": "rdscYASG16PY8zhZD0vdM",
+      "id": "rdscYASG16PY8zhZD0vdM",
+      "polygon": {
+        "x": 682.2916412353516,
+        "y": 518.75,
+        "width": 150,
+        "height": 47.5,
+        "rotation": 0
+      },
+      "hover": false,
+      "text": "Kasse"
+    }
+  ]
+}
